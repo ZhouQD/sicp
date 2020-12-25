@@ -1,0 +1,6 @@
+(define (sum-of-bigger-two x y z)
+    (define (is-smallest x y z)
+        (and (<= x y) (<= x z)))
+    (cond ((is-smallest x y z) (+ y z))
+          ((is-smallest y x z) (+ x z))
+          (else (+ x y))))
